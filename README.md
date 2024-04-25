@@ -1,5 +1,4 @@
-## $\textcolor{blue}{This\ is\ a\ Big\ Title}$
-# Comparing-Programs
+## $\textcolor{blue}{Comparitive\ Programming\ Language}$
 # Description
 
 The code is written to implement autocompletion feature, where a class maintains a dictionary of words with its popularity of occurrence and computes the top-3 most-likely completions of any input word quickly.
