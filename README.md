@@ -4,12 +4,14 @@
 The code is written to implement autocompletion feature, where a class maintains a dictionary of words with its popularity of occurrence and computes the top-3 most-likely completions of any input word quickly.
 [Involves the concept of AVL Trees]
 For Example:-
+``````````````````````````````````````````````````
                                 crocodile
                                 16583
                     alpaca                       goat
                     8523                         52317
           albatross    camel              crow         goose
           5531         110050             45921        37393
+````````````````````````````````````````````````````````````````````
 
 words starting with "a" -> alpaca, albatross
 
@@ -22,6 +24,7 @@ Java:
 ``````````
 javac Autocompleter.java
 java Autocompleter
+````````````
 
 Python:
 ````````````
