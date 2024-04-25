@@ -81,7 +81,7 @@ Considering the insert_recurse function new Node objects are created, Once these
 
 PROGRAMMING PARADIGM
 
-Java (Object-oriented paradigm):
+###### Java (Object-oriented paradigm):
 *Object-oriented:* In Java, the Autocompleter class is designed using an object-oriented paradigm.
 
 *Encapsulation:* The Entry and Node classes encapsulate data and operations related to entries and nodes in the binary search tree (BST), respectively.
@@ -93,7 +93,7 @@ Java (Object-oriented paradigm):
 *Imperative Style:* The code is written in an imperative style, focusing on how to achieve the desired result step by step, including mutation of state.
 
 
-Python (Functional and Imperative paradigm):
+###### Python (Functional and Imperative paradigm):
 *Functional:* While Python supports object-oriented programming, it also supports functional programming paradigms.
 
 *Pure Functions:* The insert function and related methods in the Autocompleter class are pure functions as they don't modify the state of the object (self) directly.
@@ -104,7 +104,7 @@ Python (Functional and Imperative paradigm):
 
 *Recursion:* The insert_recurse and related methods use recursion heavily, which aligns with the functional programming paradigm.
 
-Imperative Style: Despite supporting functional programming, the code also employs an imperative style, especially in the mutation of state (e.g., updating node heights and rebalancing).
+*Imperative Style:* Despite supporting functional programming, the code also employs an imperative style, especially in the mutation of state (e.g., updating node heights and rebalancing).
 
 
 *Comparison:*
