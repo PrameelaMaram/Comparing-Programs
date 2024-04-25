@@ -22,8 +22,8 @@ Requires python/Java compiler
 
 Java:
 ``````````
-javac autocompleterClass.java
-java Autocompleter
+javac autoCompleterClass.java
+java autoCompleterClass
 ````````````
 
 Python:
