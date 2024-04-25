@@ -83,18 +83,29 @@ PROGRAMMING PARADIGM
 
 Java (Object-oriented paradigm):
 *Object-oriented:* In Java, the Autocompleter class is designed using an object-oriented paradigm.
+
 *Encapsulation:* The Entry and Node classes encapsulate data and operations related to entries and nodes in the binary search tree (BST), respectively.
+
 *State and Behavior:* The insert function is part of the Autocompleter class, which contains both data (the root node) and behavior (methods to manipulate the BST).
+
 *Mutability:* Java allows mutable objects, so the Node objects in the BST can be modified directly, such as updating heights or rebalancing the tree.
+
 *Imperative Style:* The code is written in an imperative style, focusing on how to achieve the desired result step by step, including mutation of state.
+
 
 Python (Functional and Imperative paradigm):
 *Functional:* While Python supports object-oriented programming, it also supports functional programming paradigms.
+
 *Pure Functions:* The insert function and related methods in the Autocompleter class are pure functions as they don't modify the state of the object (self) directly.
+
 *No Explicit Encapsulation:* Python doesn't enforce encapsulation as strictly as Java. However, encapsulation is still achieved through conventions (e.g., using _ prefix for private attributes).
+
 *Immutability:* In Python, objects are generally treated as immutable. Instead of directly modifying the tree nodes, new nodes are created as needed.
+
 *Recursion:* The insert_recurse and related methods use recursion heavily, which aligns with the functional programming paradigm.
+
 Imperative Style: Despite supporting functional programming, the code also employs an imperative style, especially in the mutation of state (e.g., updating node heights and rebalancing).
+
 
 *Comparison:*
 Both Java and Python versions use an object-oriented approach to structure the code.Python, being a more flexible language, allows mixing paradigms, including functional and imperative. The functional aspect is more evident in the Python version due to the use of pure functions and recursion. Both versions achieve the same functionality, but the implementation details differ due to language-specific features and conventions.
