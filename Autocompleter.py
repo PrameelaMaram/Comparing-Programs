@@ -1,11 +1,13 @@
 class Autocompleter:
     class Entry:
         def __init__(self, word, x):
+        #  A helper class that stores a string and a frequency.
             self.s = word
             self.freq = x
 
     class Node:
         def __init__(self, temp=None):
+        # 	A helper class that implements a binary search tree node.
             self.e = temp
             self.height = 0
             self.left = None
@@ -13,14 +15,17 @@ class Autocompleter:
 
     def __init__(self):
         self.root = None
-
+    # Root of the binary-search-tree-based data structure
+    
     def height(self, cur):
+    # A convenience method for getting the height of a subtree.
         if cur is None:
             return -1
         return cur.height
 
     def inorder(self):
         self.inorder_recurse(self.root)
+    # A convenience method for in-order traversing the tree
 
     def inorder_recurse(self, cur):
         if cur is not None:
@@ -28,33 +33,47 @@ class Autocompleter:
             print(" " * self.height(cur), cur.e.s)
             self.inorder_recurse(cur.right)
 
+
+#  Adds a string x to the dictionary.
+# If x is already in the dictionary, does nothing.
     def insert(self, x, freq):
         e = self.Entry(x, freq)
         self.root = self.insert_recurse(e, self.root)
 
+# To fill insert_recurse(e, cur) for inserting an Entry e
+# into an AVL tree rooted at cur. Runs in O(log(n)) time.
     def insert_recurse(self, e, cur):
         if cur is None:
             return self.Node(e)
         cR = (e.s > cur.e.s) - (e.s < cur.e.s)
         if cR < 0:
             cur.left = self.insert_recurse(e, cur.left)
+            # left sub tree
         elif cR > 0:
             cur.right = self.insert_recurse(e, cur.right)
+            # right sub tree
         else:
             return cur
         cur.height = max(self.height(cur.left), self.height(cur.right)) + 1
         return self.rebalance(cur)
-
+'''
+To fill rebalance() for rebalancing the AVL tree rooted at cur.
+Helpful for insert_recurse().
+Should be called on every node visited during
+the search in reverse search order.
+'''
     def rebalance(self, cur):
         if cur is None:
             return cur
         bf = self.height(cur.left) - self.height(cur.right)
+        # Left side is large
         if bf < -1:
             if self.height(cur.right.right) >= self.height(cur.right.left):
                 cur = self.left_rotate(cur)
             else:
                 cur.right = self.right_rotate(cur.right)
                 cur = self.left_rotate(cur)
+        # Right side is large
         elif bf > 1:
             if self.height(cur.left.left) >= self.height(cur.left.right):
                 cur = self.right_rotate(cur)
@@ -63,6 +82,10 @@ class Autocompleter:
                 cur = self.right_rotate(cur)
         return cur
 
+
+'''To fill right_rotate(cur) for the right rotation around the node cur
+ of an AVL tree (helpful for implementing rebalance).
+ '''
     def right_rotate(self, cur):
         nR = cur.left
         t = nR.right
@@ -71,7 +94,10 @@ class Autocompleter:
         cur.height = max(self.height(cur.left), self.height(cur.right)) + 1
         nR.height = max(self.height(nR.left), self.height(nR.right)) + 1
         return nR
-
+        
+'''To fill left_rotate(cur) for the left rotation around the node cur
+ of an AVL tree (helpful for implementing rebalance).
+'''
     def left_rotate(self, cur):
         nR = cur.right
         t = nR.left
@@ -81,9 +107,11 @@ class Autocompleter:
         nR.height = max(self.height(nR.left), self.height(nR.right)) + 1
         return nR
 
+# Returns the number of strings in the dictionary
     def size(self):
         return self.size_recurse(self.root)
 
+# To fill size_recurse() to calculate the size of the binary tree rooted at cur recursively.
     def size_recurse(self, cur):
         if cur is None:
             return 0
