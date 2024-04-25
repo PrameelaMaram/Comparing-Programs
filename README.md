@@ -22,13 +22,13 @@ Requires python/Java compiler
 
 Java:
 ``````````
-javac Autocompleter.java
+javac autocompleterClass.java
 java Autocompleter
 ````````````
 
 Python:
 ````````````
-python autocompleter.py
+python Autocompleter.py
 ```````````````````
 
 # Explanation/Comparison
