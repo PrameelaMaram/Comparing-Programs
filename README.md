@@ -1,4 +1,4 @@
-## $\textcolor{yellow}{This\ is\ a\ Big\ Title}$
+## $\textcolor{blue}{This\ is\ a\ Big\ Title}$
 # Comparing-Programs
 # Description
 
