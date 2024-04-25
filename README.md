@@ -83,11 +83,11 @@ PROGRAMMING PARADIGM
 ###### Java (Object-oriented paradigm):
 *Object-oriented:* In Java, the Autocompleter class is designed using an object-oriented paradigm.
 
-*Encapsulation:* The Entry and Node classes encapsulate data and operations related to entries and nodes in the binary search tree (BST), respectively.
+*Encapsulation:* The Entry and Node classes encapsulate data and operations related to entries and nodes in the AVL tree, respectively.
 
 *State and Behavior:* The insert function is part of the Autocompleter class, which contains both data (the root node) and behavior (methods to manipulate the BST).
 
-*Mutability:* Java allows mutable objects, so the Node objects in the BST can be modified directly, such as updating heights or rebalancing the tree.
+*Mutability:* Java allows mutable objects, so the Node objects in the AVL tree can be modified directly, such as updating heights or rebalancing the tree.
 
 *Imperative Style:* The code is written in an imperative style, focusing on how to achieve the desired result step by step, including mutation of state.
 
